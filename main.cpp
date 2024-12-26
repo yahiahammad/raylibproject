@@ -40,15 +40,29 @@ public:
 
     void Draw()
     {
+        if (body.getHead() != nullptr)
+        {
+            float headX = body.getHead()->data.x;
+            float headY = body.getHead()->data.y;
+            Rectangle headRect = Rectangle{offset + headX * cellSize, offset + headY * cellSize, (float)cellSize, (float)cellSize};
+            DrawRectangleRounded(headRect, 0.9, 6, RED); // Use a distinct color for the head (e.g., RED)
+        }
+
+        // Draw the rest of the body with the usual color
         LinkedList<Vector2>::NodePointer ptr = body.getHead();
+        if (ptr != nullptr)
+            ptr = ptr->next; // Skip the head node
+
         while (ptr != nullptr)
         {
             float x = ptr->data.x;
             float y = ptr->data.y;
             Rectangle segment = Rectangle{offset + x * cellSize, offset + y * cellSize, (float)cellSize, (float)cellSize};
-            DrawRectangleRounded(segment, 0.5, 6, darkGreen);
+            DrawRectangleRounded(segment, 0.5, 6, darkGreen); // Use the normal body color
             ptr = ptr->next;
         }
+
+
     }
 
     void Update()
@@ -248,7 +262,7 @@ int main()
         // Drawing
         ClearBackground(green);
         DrawRectangleLinesEx(Rectangle{(float)offset - 5, (float)offset - 5, (float)cellSize * cellCount + 10, (float)cellSize * cellCount + 10}, 5, darkGreen);
-        DrawText("Snake Game", offset - 5, 20, 40, darkGreen);
+        DrawText("Snake Game - Linked List", offset - 5, 20, 40, darkGreen);
         DrawText(TextFormat("%i", game.score), offset - 5, offset + cellSize * cellCount + 10, 40, darkGreen);
         game.Draw();
 

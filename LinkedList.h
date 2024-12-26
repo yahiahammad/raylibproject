@@ -224,7 +224,7 @@ class LinkedList {
 				if (pred->data == x) {
 					return true;
 				}
-				while (pred->next != 0) {
+				while (pred!= 0) {
 					if (pred->data == x) {
 						return true;
 					}
