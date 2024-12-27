@@ -7,6 +7,24 @@
 },
 {
   "directory": "C:/Users/yahia/CLionProjects/raylibproject/cmake-build-debug",
+  "command": "\"D:\\JetBrains\\CLion 2024.3\\bin\\mingw\\bin\\g++.exe\" -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -IC:/Users/yahia/CLionProjects/raylibproject/cmake-build-debug/_deps/raylib-src/src -IC:/Users/yahia/CLionProjects/raylibproject/cmake-build-debug/_deps/raylib-src/src/external/glfw/include -g -fdiagnostics-color=always -o CMakeFiles\\raylibproject.dir\\Snake.cpp.obj -c C:\\Users\\yahia\\CLionProjects\\raylibproject\\Snake.cpp",
+  "file": "C:\\Users\\yahia\\CLionProjects\\raylibproject\\Snake.cpp",
+  "output": "CMakeFiles\\raylibproject.dir\\Snake.cpp.obj"
+},
+{
+  "directory": "C:/Users/yahia/CLionProjects/raylibproject/cmake-build-debug",
+  "command": "\"D:\\JetBrains\\CLion 2024.3\\bin\\mingw\\bin\\g++.exe\" -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -IC:/Users/yahia/CLionProjects/raylibproject/cmake-build-debug/_deps/raylib-src/src -IC:/Users/yahia/CLionProjects/raylibproject/cmake-build-debug/_deps/raylib-src/src/external/glfw/include -g -fdiagnostics-color=always -o CMakeFiles\\raylibproject.dir\\Game.cpp.obj -c C:\\Users\\yahia\\CLionProjects\\raylibproject\\Game.cpp",
+  "file": "C:\\Users\\yahia\\CLionProjects\\raylibproject\\Game.cpp",
+  "output": "CMakeFiles\\raylibproject.dir\\Game.cpp.obj"
+},
+{
+  "directory": "C:/Users/yahia/CLionProjects/raylibproject/cmake-build-debug",
+  "command": "\"D:\\JetBrains\\CLion 2024.3\\bin\\mingw\\bin\\g++.exe\" -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -IC:/Users/yahia/CLionProjects/raylibproject/cmake-build-debug/_deps/raylib-src/src -IC:/Users/yahia/CLionProjects/raylibproject/cmake-build-debug/_deps/raylib-src/src/external/glfw/include -g -fdiagnostics-color=always -o CMakeFiles\\raylibproject.dir\\Food.cpp.obj -c C:\\Users\\yahia\\CLionProjects\\raylibproject\\Food.cpp",
+  "file": "C:\\Users\\yahia\\CLionProjects\\raylibproject\\Food.cpp",
+  "output": "CMakeFiles\\raylibproject.dir\\Food.cpp.obj"
+},
+{
+  "directory": "C:/Users/yahia/CLionProjects/raylibproject/cmake-build-debug",
   "command": "\"D:\\JetBrains\\CLion 2024.3\\bin\\mingw\\bin\\gcc.exe\" -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP -D_CRT_SECURE_NO_WARNINGS -IC:/Users/yahia/CLionProjects/raylibproject/cmake-build-debug/_deps/raylib-src/src -isystem C:/Users/yahia/CLionProjects/raylibproject/cmake-build-debug/_deps/raylib-src/src/external/glfw/include -fno-strict-aliasing -Werror=implicit-function-declaration -Werror=pointer-arith  -g -std=gnu99 -fdiagnostics-color=always -o _deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\raudio.c.obj -c C:\\Users\\yahia\\CLionProjects\\raylibproject\\cmake-build-debug\\_deps\\raylib-src\\src\\raudio.c",
   "file": "C:\\Users\\yahia\\CLionProjects\\raylibproject\\cmake-build-debug\\_deps\\raylib-src\\src\\raudio.c",
   "output": "_deps\\raylib-build\\raylib\\CMakeFiles\\raylib.dir\\raudio.c.obj"

@@ -16,13 +16,23 @@ Game::~Game()
 
 void Game::Draw()
 {
-    food.Draw();
-    snake.Draw();
+    if (status == RUNNING) {
+        food.Draw();
+        snake.Draw();
+    }
+    if (status == PAUSED) {
+        ClearBackground(RAYWHITE);
+        DrawText("Game Paused", (cellCount*cellSize-offset) / 2, (cellCount*cellSize+offset) / 2, 40, darkGreen);
+    }
+    if (status == GAMEOVER) {
+        ClearBackground(BLACK);
+        DrawText("Game Over, Press space to retry", (cellCount*cellSize-offset-450) / 2, (cellCount*cellSize+offset) / 2, 40, RED);
+    }
 }
 
 void Game::Update()
 {
-    if (running)
+    if (status == RUNNING)
     {
         snake.Update();
         CheckCollisionWithFood();
@@ -58,9 +68,10 @@ void Game::GameOver()
 {
     snake.Reset();
     food.position = food.GenerateRandomPos(snake.body);
-    running = false;
+    status = GAMEOVER;
     score = 0;
     PlaySound(wallSound);
+
 }
 
 void Game::CheckCollisionWithTail()

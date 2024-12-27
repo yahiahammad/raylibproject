@@ -6,13 +6,17 @@
 #include "Snake.h"
 #include "Food.h"
 
-
+enum Status {
+    RUNNING = 0,
+    PAUSED,
+    GAMEOVER
+};
 class Game
 {
 public:
     Snake snake = Snake();
     Food food = Food(snake.body);
-    bool running = true;
+    Status status = RUNNING;
     int score = 0;
     Sound eatSound;
     Sound wallSound;

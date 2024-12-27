@@ -57,6 +57,30 @@ build CMakeFiles/raylibproject.dir/main.cpp.obj: CXX_COMPILER__raylibproject_uns
   OBJECT_DIR = CMakeFiles\raylibproject.dir
   OBJECT_FILE_DIR = CMakeFiles\raylibproject.dir
 
+build CMakeFiles/raylibproject.dir/Snake.cpp.obj: CXX_COMPILER__raylibproject_unscanned_Debug C$:/Users/yahia/CLionProjects/raylibproject/Snake.cpp || cmake_object_order_depends_target_raylibproject
+  DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
+  DEP_FILE = CMakeFiles\raylibproject.dir\Snake.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/yahia/CLionProjects/raylibproject/cmake-build-debug/_deps/raylib-src/src -IC:/Users/yahia/CLionProjects/raylibproject/cmake-build-debug/_deps/raylib-src/src/external/glfw/include
+  OBJECT_DIR = CMakeFiles\raylibproject.dir
+  OBJECT_FILE_DIR = CMakeFiles\raylibproject.dir
+
+build CMakeFiles/raylibproject.dir/Game.cpp.obj: CXX_COMPILER__raylibproject_unscanned_Debug C$:/Users/yahia/CLionProjects/raylibproject/Game.cpp || cmake_object_order_depends_target_raylibproject
+  DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
+  DEP_FILE = CMakeFiles\raylibproject.dir\Game.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/yahia/CLionProjects/raylibproject/cmake-build-debug/_deps/raylib-src/src -IC:/Users/yahia/CLionProjects/raylibproject/cmake-build-debug/_deps/raylib-src/src/external/glfw/include
+  OBJECT_DIR = CMakeFiles\raylibproject.dir
+  OBJECT_FILE_DIR = CMakeFiles\raylibproject.dir
+
+build CMakeFiles/raylibproject.dir/Food.cpp.obj: CXX_COMPILER__raylibproject_unscanned_Debug C$:/Users/yahia/CLionProjects/raylibproject/Food.cpp || cmake_object_order_depends_target_raylibproject
+  DEFINES = -DGRAPHICS_API_OPENGL_33 -DPLATFORM_DESKTOP
+  DEP_FILE = CMakeFiles\raylibproject.dir\Food.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always
+  INCLUDES = -IC:/Users/yahia/CLionProjects/raylibproject/cmake-build-debug/_deps/raylib-src/src -IC:/Users/yahia/CLionProjects/raylibproject/cmake-build-debug/_deps/raylib-src/src/external/glfw/include
+  OBJECT_DIR = CMakeFiles\raylibproject.dir
+  OBJECT_FILE_DIR = CMakeFiles\raylibproject.dir
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target raylibproject
@@ -65,7 +89,7 @@ build CMakeFiles/raylibproject.dir/main.cpp.obj: CXX_COMPILER__raylibproject_uns
 #############################################
 # Link the executable raylibproject.exe
 
-build raylibproject.exe: CXX_EXECUTABLE_LINKER__raylibproject_Debug CMakeFiles/raylibproject.dir/main.cpp.obj | _deps/raylib-build/raylib/libraylib.a || _deps/raylib-build/raylib/external/glfw/src/glfw _deps/raylib-build/raylib/libraylib.a
+build raylibproject.exe: CXX_EXECUTABLE_LINKER__raylibproject_Debug CMakeFiles/raylibproject.dir/main.cpp.obj CMakeFiles/raylibproject.dir/Snake.cpp.obj CMakeFiles/raylibproject.dir/Game.cpp.obj CMakeFiles/raylibproject.dir/Food.cpp.obj | _deps/raylib-build/raylib/libraylib.a || _deps/raylib-build/raylib/external/glfw/src/glfw _deps/raylib-build/raylib/libraylib.a
   FLAGS = -g
   LINK_LIBRARIES = _deps/raylib-build/raylib/libraylib.a  -lopengl32  -lglu32  -lwinmm  -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\raylibproject.dir

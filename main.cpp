@@ -28,8 +28,11 @@ bool EventTriggered(double interval)
 int main()
 {
     cout << "Starting the game..." << endl;
-    InitWindow(2 * offset + cellSize * cellCount, 2 * offset + cellSize * cellCount, "Retro Snake");
-    SetTargetFPS(60);
+    InitWindow(2 * offset + cellSize * cellCount, 2 * offset + cellSize * cellCount, "Snake Game");
+    Image icon = LoadImage("Graphics/icon.png");
+    SetWindowIcon( icon );
+    UnloadImage(icon);
+    SetTargetFPS(144);
 
     Game game = Game();
 
@@ -37,7 +40,7 @@ int main()
     {
         BeginDrawing();
 
-        if (EventTriggered(0.2))
+        if (EventTriggered(0.15) && game.status == RUNNING)
         {
             allowMove = true;
             game.Update();
@@ -46,27 +49,44 @@ int main()
         if (IsKeyPressed(KEY_UP) && game.snake.direction.y != 1 && allowMove)
         {
             game.snake.direction = {0, -1};
-            game.running = true;
+            game.status = RUNNING;
             allowMove = false;
         }
         if (IsKeyPressed(KEY_DOWN) && game.snake.direction.y != -1 && allowMove)
         {
             game.snake.direction = {0, 1};
-            game.running = true;
+            game.status = RUNNING;
             allowMove = false;
         }
         if (IsKeyPressed(KEY_LEFT) && game.snake.direction.x != 1 && allowMove)
         {
             game.snake.direction = {-1, 0};
-            game.running = true;
+            game.status = RUNNING;
             allowMove = false;
         }
         if (IsKeyPressed(KEY_RIGHT) && game.snake.direction.x != -1 && allowMove)
         {
             game.snake.direction = {1, 0};
-            game.running = true;
+            game.status = RUNNING;
             allowMove = false;
         }
+        if (IsKeyPressed(KEY_SPACE) && game.status == RUNNING) {
+            allowMove = false;
+            game.status = PAUSED;
+        }
+        else if (IsKeyPressed(KEY_SPACE) && game.status == PAUSED) {
+            allowMove = true;
+            game.status = RUNNING;
+        }
+        if (IsKeyPressed(KEY_SPACE) && game.status == GAMEOVER) {
+            allowMove = true;
+            game.status = RUNNING;
+        }
+        else if (game.status == GAMEOVER) {
+            allowMove = false;
+            game.status = GAMEOVER;
+        }
+
 
         // Drawing
         ClearBackground(green);
