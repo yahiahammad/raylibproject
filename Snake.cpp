@@ -16,7 +16,7 @@ void Snake::Draw()
         float headX = body.getHead()->data.x;
         float headY = body.getHead()->data.y;
         Rectangle headRect = Rectangle{offset + headX * cellSize, offset + headY * cellSize, (float)cellSize, (float)cellSize};
-        DrawRectangleRounded(headRect, 0.9, 6, RED); // Use a distinct color for the head (e.g., RED)
+        DrawRectangleRounded(headRect, 0.9, 6, BLUE); // Use a distinct color for the head (e.g., RED)
     }
 
     // Draw the rest of the body with the usual color
